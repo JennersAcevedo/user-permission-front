@@ -1,0 +1,29 @@
+.titleContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 1rem;
+    width: 50vw;
+    margin: 2rem 0;
+    text-align: center;
+    color: #f7f7f7; 
+    background-color: #245970;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  }
+  
+  .highlightedText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e7e5e5; 
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .highlightedText:hover {
+    color: #131212; 
+    transform: scale(1.05); 
+  }
+  
