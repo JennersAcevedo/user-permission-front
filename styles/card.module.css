@@ -1,0 +1,102 @@
+/* Card.module.css */
+.card {
+    width: 21vw;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #5BC0BE;
+    transition: transform 0.3s ease;
+    background-color: #245970; 
+    margin: 1rem auto;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(218, 175, 66, 0.9); /* Fondo semi-transparente */
+    color: #EAEAEA; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center; /* Centra el texto para pantallas más pequeñas */
+  }
+  
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: #EAEAEA;
+  }
+  
+  .description {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+    color: #262525; 
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    .card {
+      width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+      margin: 1rem auto; /* Centra las tarjetas con margen */
+    }
+  
+    .imageContainer {
+      height: 150px; /* Reduce la altura de la imagen */
+    }
+  
+    .title {
+      font-size: 1.2rem; /* Reduce el tamaño de la fuente del título */
+      padding: 0.5rem;
+    }
+  
+    .description {
+      font-size: 0.9rem; /* Reduce el tamaño de la fuente de la descripción */
+      padding: 0 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 95%; /* Mayor ancho para pantallas muy pequeñas */
+    }
+  
+    .imageContainer {
+      height: 120px; /* Ajusta aún más la altura de la imagen */
+    }
+  
+    .title {
+      font-size: 1rem; /* Ajusta el título para pantallas pequeñas */
+    }
+  
+    .description {
+      font-size: 0.8rem; /* Ajusta la descripción para pantallas pequeñas */
+    }
+  }
+  
