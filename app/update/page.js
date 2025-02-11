@@ -66,7 +66,7 @@ export default function Update() {
       <main className={styles.main}>
         <div className={styles.division}></div>
         <Title title="Update Permission" />
-        <div className={styles.services}>
+        <div className={styles.permissions}>
           {permissionData.length > 0 ? (
             permissionData.map((permiso) => (
               <HomeCard
@@ -87,21 +87,21 @@ export default function Update() {
         {modalOpen && selectedPermission && (
           <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
-              <h2>Actualizar Permiso</h2>
+              <h2>Update Permission</h2>
               <form onSubmit={handleUpdate}>
                 <input
                   type="text"
                   name="nombreEmpleado"
                   value={selectedPermission.nombreEmpleado}
                   onChange={handleInputChange}
-                  placeholder="Nombre"
+                  placeholder="Name"
                 />
                 <input
                   type="text"
                   name="apellidoEmpleado"
                   value={selectedPermission.apellidoEmpleado}
                   onChange={handleInputChange}
-                  placeholder="Apellido"
+                  placeholder="Last name"
                 />
                 <select
                   name="tipoPermiso"
@@ -120,9 +120,9 @@ export default function Update() {
                   value={selectedPermission.fechaPermiso}
                   onChange={handleInputChange}
                 />
-                <button type="submit">Actualizar</button>
+                <button type="submit">Update</button>
                 <button type="button" onClick={() => setModalOpen(false)}>
-                  Cerrar
+                  Close
                 </button>
               </form>
             </div>

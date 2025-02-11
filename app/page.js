@@ -13,7 +13,6 @@ export default function Home() {
     async function fetchData() {
       try {
         const response = await axios.get("http://localhost:5234/api/Permiso");
-        console.log("API Response:", response.data);
         if (Array.isArray(response.data)) {
           setPermissionData(response.data); 
         } else {
@@ -33,7 +32,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.division}></div>
         <Title title="Get Permission" />
-        <div className={styles.services}>
+        <div className={styles.permissions}>
         {permissionData.length > 0 ? (
             permissionData.map((permiso, index) => (
               <HomeCard
