@@ -8,13 +8,6 @@
     position: relative;
   }
   
-  .logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
   .hamburger {
     display: none;
     font-size: 2rem;
@@ -48,31 +41,7 @@
   
   .navItem a:hover {
     color: #5BC0BE;
-  }
-  
-  .appointment {
-    margin-left: 1.5rem;
-    background-color: #EAEAEA;
-    color: #262525;
-    padding: 0.75rem 1.5rem;
-    border-radius: 23px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s, color 0.3s;
-    text-align: center;
-  }
-  
-  .appointment a {
-    color: #262525;
-    text-decoration: none;
-  }
-  
-  .appointment:hover {
-    background-color: #fff;
-    color: #262525;
-  }
-  
-  
+  }  
   
   /* Estilo para el menú móvil */
   .navItemsMobile {

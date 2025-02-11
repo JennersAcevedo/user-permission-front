@@ -106,7 +106,7 @@
     height: 100%;
 }
 
-.services {
+.permissions {
     width: 65vw;
     display: grid;
     margin-left: 15vw;
@@ -116,17 +116,14 @@
 }
 
 @media (max-width: 768px) {
-    .services {
+    .permissions {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    .services {
+    .permissions {
         grid-template-columns: 1fr;
     }
 }
 
-.footer {
-    margin-top: 2vw;
-}

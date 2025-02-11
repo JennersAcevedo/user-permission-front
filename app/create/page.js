@@ -28,10 +28,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        console.log(formData)
       const response = await axios.post("http://localhost:5234/api/Permiso", formData);
-      console.log("Registro exitoso:", response.data);
-  
       setPermissionData([...permissionData, response.data]); 
       setFormData({ nombreEmpleado: "", apellidoEmpleado: "", tipoPermisoId: 1, fechaPermiso: "" }); 
     } catch (error) {
@@ -52,7 +49,7 @@ export default function Home() {
           <input
             type="text"
             name="nombreEmpleado"
-            placeholder="Nombre del empleado"
+            placeholder="Name employee"
             value={formData.nombreEmpleado}
             onChange={handleChange}
             required
@@ -60,14 +57,14 @@ export default function Home() {
           <input
             type="text"
             name="apellidoEmpleado"
-            placeholder="Apellido del empleado"
+            placeholder="Last name employee"
             value={formData.apellidoEmpleado}
             onChange={handleChange}
             required
           />
            <select
                   name="tipoPermisoId"
-                  value={formData.tipoPermiso-1}
+                  value={formData.tipoPermisoId-1}
                   onChange={handleChange}
                 >
                   {tiposPermiso.map((tipo, index) => (
@@ -83,10 +80,10 @@ export default function Home() {
             onChange={handleChange}
             required
           />
-          <button type="submit">Registrar Permiso</button>
+          <button type="submit">Create Permission</button>
         </form>
 
-        <div className={styles.services}>
+        <div className={styles.permissions}>
           {
             permissionData.map((permiso, index) => (
               <HomeCard
